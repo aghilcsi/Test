@@ -1,0 +1,1015 @@
+<div class="background">
+  <img class="headerImage" src="../../assets/newassets/wave3.svg" alt="" />
+  <div style="position: absolute; padding: .5rem 1rem; top: 0; left: 0; right: 0; text-align: right;">
+    <img
+      style="/*margin-top: 20px;*/ max-width: 15rem;"
+      src="../../assets/newassets/logo2.png"
+      alt=""
+    />
+  </div>
+  
+  <div *ngIf="showFirstloginDiv" class="loginInput row">
+    <img
+      style="margin-top: 0px; max-width: 10rem;"
+      src="../../assets/newassets/irrep_logo.png"
+      alt=""
+    />
+    <button
+      style="left: 16px; top: 12px"
+      matTooltip="راهنمای کار با سامانه"
+      (click)="startMainHelpTour()"
+      *ngIf="!showAsrDiv && !showAbclDiv"
+      class="helpButton9"
+      mat-mini-fab
+    >
+      <mat-icon>info</mat-icon>
+    </button>
+    <h6
+      style="
+        color: #27abb7;
+        font-weight: bold;
+        padding-right: 90px;
+        padding-left: 90px;
+      "
+    >
+      ورود به درگاه اختصاصی آزمون های شرکت تهیه و تولید مواد نسوز کشور
+    </h6>
+    <div>
+      <form
+        style="margin-top: 22px"
+        [formGroup]="form"
+        (ngSubmit)="form.valid && onSubmitForm()"
+      >
+        <div id="groupMainHelpElement1">
+          <input
+            formControlName="emailLogin"
+            style="
+              font-family: 'Yekan';
+              font-size: 17px;
+              text-align: right;
+              box-shadow: 0 0 5px rgba(0, 80, 80, 0.4);
+              border-radius: 4px;
+              margin-top: 8px;
+              border-radius: 7px;
+              height: 44px;
+              /* padding-top: 6px;
+            padding-right: 9px; */
+              padding-top: 10px;
+              padding-right: 14px;
+            "
+            type="text"
+            name="username"
+            id="username"
+            class="form__input"
+            autocomplete="off"
+            placeholder="کد ملی را وارد کنید"
+          />
+          <div
+            *ngIf="
+              form.get('emailLogin').touched && form.get('emailLogin').invalid
+            "
+          >
+            <div style="margin-top: 2px; font-size: 14px; color: #ff1c0b">
+              کد ملی باید 10 رقم باشد
+            </div>
+          </div>
+        </div>
+
+        <!-- <div>
+        <input
+          formControlName="password"
+          style="
+            font-family: 'Yekan';
+            box-shadow: 0 0 5px rgba(0, 80, 80, 0.4);
+            border-radius: 4px;
+            font-size: 17px;
+            text-align: right;
+            margin-top: 8px;
+            border-radius: 7px;
+            height: 44px;
+            padding-top: 6px;
+            padding-right: 9px;
+          "
+          type="password"
+          name="password"
+          id="password"
+          class="form__input"
+          placeholder="رمز عبور"
+        />
+      </div> -->
+
+        <div id="groupMainHelpElement2">
+          <input
+            style="font-size: 18px"
+            type="submit"
+            value="ورود به سامانه"
+            class="btn"
+          />
+        </div>
+      </form>
+    </div>
+
+    <div class="message1">
+      <div
+        class="col-md-12"
+        style="
+          background-color: #e3fbb6;
+          color: #8e3204;
+          font-weight: initial;
+          padding: 8px;
+          border-radius: 9px;
+          /* padding-right: 40px;
+          padding-left: 40px; */
+          padding-right: 20px;
+          padding-left: 20px;
+        "
+      >
+        مراجع محترم با سلام تست حاضر برای ارزیابی سلامت روان خود شما می
+        باشد. نتایج این تست کاملا محرمانه بوده و هیچ تاثیری در نقش سازمانی شما
+        نخواهد داشت. پاسخگویی درست به این آزمونها در آگاهی بخشیدن به وضعیت سلامت
+        روحی و روانی شما موثر بوده و به ارتقاء عملکرد شغلی و زندگی شخصی شما
+        بسیار کمک خواهد کرد. لذا خواهشمندیم در پاسخ به سوالات این آزمون کمال دقت
+        و صداقت را داشته باشید اصولا اولین پاسخی که به ذهن شما خطور میکند درست
+        ترین پاسخ باشد. شما در پایان می توانید نمودار وضعیت سلامت روان خود را
+        مشاهده فرمائید. پیشاپیش از پاسخگویی صادقانه شما سپاسگزاریم گروه آتیه درخشان ذهن
+    
+        <!-- برای نخستین استفاده از سیستم شما لازم است اطلاعات 1) شماره دفتر کل 2)
+        شماره ملی و 3) شماره حساب اعلامی صندوق بازنشستگی را وارد نمایید. پس ازآن
+        تنها با ورود شماره موبایل و پیامک میتوانید از سیستم استفاده کنید. -->
+      </div>
+    </div>
+    <!-- <div class="message2">
+      <div
+        class="col-md-12"
+        style="
+          background-color: #e3fbb6;
+          color: #8e3204;
+          font-weight: initial;
+          padding: 8px;
+          border-radius: 9px;
+          /* padding-right: 40px;
+          padding-left: 40px; */
+          padding-right: 20px;
+          padding-left: 20px;
+        "
+      >
+        توجه بفرمایید که علاوه بر شما همسر شما نیز می تواند به صورت رایگان از
+        آزمون های روانشناسی کلینیک استفاده کنند. لذا در حین ثبت نام ورود اطلاعات
+        همسر نیز لازم است. همچنین شما علاوه بر انجام ازمون توسط خودتان برای
+        شناخت و درمان دقیق تر لازم است آزمون ها را به فرزندان یا افراد نزدیک خود
+        نیز ارجاع دهید.
+      </div>
+    </div> -->
+    <div class="message3">
+      <div
+        class="col-md-12"
+        style="
+          background-color: #ffe4a9;
+          color: #8e3204;
+          font-weight: initial;
+          padding: 8px;
+          border-radius: 9px;
+          padding-right: 40px;
+          padding-left: 40px;
+        "
+      >
+        کاربر گرامی لطفا به نکات زیر توجه فرمایید
+      </div>
+    </div>
+  </div>
+  <div *ngIf="showverfiyCodeDiv" class="loginInput row">
+    <img
+      style="margin-top: 0px; max-width: 10rem;"
+      src="../../assets/newassets/irrep_logo.png"
+      alt=""
+    />
+    <h6
+      style="
+        color: #27abb7;
+        font-weight: bold;
+        padding-right: 90px;
+        padding-left: 90px;
+      "
+    >
+      ورود به درگاه اختصاصی آزمون های شرکت تهیه و تولید مواد نسوز کشور
+    </h6>
+    <div>
+      <form
+        style="margin-top: 22px"
+        [formGroup]="form5"
+        (ngSubmit)="form.valid && onSubmitForm5()"
+      >
+        <div>
+          <input
+            formControlName="code"
+            style="
+              font-family: 'Yekan';
+              font-size: 17px;
+              text-align: right;
+              box-shadow: 0 0 5px rgba(0, 80, 80, 0.4);
+              border-radius: 4px;
+              margin-top: 8px;
+              border-radius: 7px;
+              height: 44px;
+              /* padding-top: 6px;
+            padding-right: 9px; */
+              padding-top: 10px;
+              padding-right: 14px;
+            "
+            type="text"
+            name="username"
+            id="username"
+            class="form__input"
+            placeholder="کد دریافتی را وارد کنید"
+          />
+          <div>
+            <div style="margin-top: 2px; color: #03378a; font-size: 17px">
+              کد ورود به شماره همراه ثبت شده برای کد ملی « {{ form.get("emailLogin").value }} »
+              پیامک گردید
+              <span
+                (click)="showverfiyCodeDiv = false; showFirstloginDiv = true"
+                style="color: #ff1c0b;font-weight: bold; cursor: pointer"
+              >
+                تغییر کد ملی
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- <re-captcha
+          (resolved)="resolved($event)"
+          siteKey="6LccEcsbAAAAAFab2DpiulZOf_oZOkCOn4rqAZIt-"
+        ></re-captcha> -->
+        <!-- <button (click)="executeImportantAction()">Important action</button> -->
+        <div>
+          <input
+            style="font-size: 18px"
+            type="submit"
+            value="ورود به سامانه"
+            class="btn"
+          />
+        </div>
+      </form>
+    </div>
+
+    <!-- <div class="message1">
+      <div
+        class="col-md-12"
+        style="
+          background-color: #e3fbb6;
+          color: #8e3204;
+          font-weight: initial;
+          padding: 8px;
+          border-radius: 9px;
+          padding-right: 40px;
+          padding-left: 40px;
+        "
+      >
+        بازنشسته گرامی لطفا به نکات زیر توجه فرمایید
+      </div>
+    </div>
+    <div class="message2">
+      <div
+        class="col-md-12"
+        style="
+          background-color: #e3fbb6;
+          color: #8e3204;
+          font-weight: initial;
+          padding: 8px;
+          border-radius: 9px;
+          padding-right: 40px;
+          padding-left: 40px;
+        "
+      >
+        بازنشسته گرامی لطفا به نکات زیر توجه فرمایید
+      </div>
+    </div>
+    <div class="message3">
+      <div
+        class="col-md-12"
+        style="
+          background-color: #ffe4a9;
+          color: #8e3204;
+          font-weight: initial;
+          padding: 8px;
+          border-radius: 9px;
+          padding-right: 40px;
+          padding-left: 40px;
+        "
+      >
+        بازنشسته گرامی لطفا به نکات زیر توجه فرمایید
+      </div>
+    </div> -->
+  </div>
+  <div *ngIf="showSignUpInfoDiv" class="loginInput2 row">
+    <img
+      style="margin-top: 14px"
+      src="../../assets/newassets/logo1.png"
+      alt=""
+    />
+    <h5 style="color: #d95e63; font-weight: bold">کلینیک آتیه</h5>
+    <h6
+      style="
+        color: #27abb7;
+        font-weight: bold;
+        padding-right: 90px;
+        padding-left: 90px;
+      "
+    >
+      ورود به درگاه اختصاصی آزمون های سازمان بازنشستگی
+    </h6>
+
+    <div>
+      <form
+        style="margin-top: 22px"
+        [formGroup]="form2"
+        (ngSubmit)="form.valid && onSubmitForm2()"
+      >
+        <div>
+          <input
+            formControlName="emailLogin"
+            style="
+              font-family: 'Yekan';
+              font-size: 17px;
+              text-align: right;
+              box-shadow: 0 0 5px rgba(0, 80, 80, 0.4);
+              border-radius: 4px;
+              margin-top: 8px;
+              border-radius: 7px;
+              height: 44px;
+              /* padding-top: 6px;
+            padding-right: 9px; */
+              padding-top: 10px;
+              padding-right: 14px;
+            "
+            type="text"
+            name="username"
+            id="username"
+            class="form__input"
+            placeholder="شماره دفتر کل را وارد کنید"
+          />
+        </div>
+        <div style="margin-top: -12px">
+          <input
+            formControlName="password"
+            style="
+              font-family: 'Yekan';
+              box-shadow: 0 0 5px rgba(0, 80, 80, 0.4);
+              border-radius: 4px;
+              font-size: 17px;
+              text-align: right;
+              margin-top: 8px;
+              border-radius: 7px;
+              height: 44px;
+              padding-top: 6px;
+              padding-right: 9px;
+            "
+            type="text"
+            class="form__input"
+            placeholder="شماره ملی را وارد کنید"
+          />
+        </div>
+        <div style="margin-top: -12px">
+          <input
+            formControlName="shHesab"
+            style="
+              font-family: 'Yekan';
+              box-shadow: 0 0 5px rgba(0, 80, 80, 0.4);
+              border-radius: 4px;
+              font-size: 17px;
+              text-align: right;
+              margin-top: 8px;
+              border-radius: 7px;
+              height: 44px;
+              padding-top: 6px;
+              padding-right: 9px;
+            "
+            type="text"
+            class="form__input"
+            placeholder="شماره حساب را وارد کنید"
+          />
+        </div>
+
+        <div>
+          <input
+            style="font-size: 18px; margin-top: 0"
+            type="submit"
+            value="بررسی اطلاعات"
+            class="btn"
+          />
+        </div>
+      </form>
+    </div>
+    <!-- <a
+      style="
+        color: #10939f;
+        font-weight: bold;
+
+        position: relative;
+        bottom: 10px;
+      "
+      href=""
+    >
+      <u>رمز عبور را فراموش کردم</u>
+    </a> -->
+    <!-- <div class="message1">
+      <div
+        class="col-md-12"
+        style="
+          background-color: #e3fbb6;
+          color: #8e3204;
+          font-weight: initial;
+          padding: 8px;
+          border-radius: 9px;
+          padding-right: 40px;
+          padding-left: 40px;
+        "
+      >
+        بازنشسته گرامی لطفا به نکات زیر توجه فرمایید
+      </div>
+    </div>
+    <div class="message2">
+      <div
+        class="col-md-12"
+        style="
+          background-color: #e3fbb6;
+          color: #8e3204;
+          font-weight: initial;
+          padding: 8px;
+          border-radius: 9px;
+          padding-right: 40px;
+          padding-left: 40px;
+        "
+      >
+        بازنشسته گرامی لطفا به نکات زیر توجه فرمایید
+      </div>
+    </div>
+    <div class="message3">
+      <div
+        class="col-md-12"
+        style="
+          background-color: #ffe4a9;
+          color: #8e3204;
+          font-weight: initial;
+          padding: 8px;
+          border-radius: 9px;
+          padding-right: 40px;
+          padding-left: 40px;
+        "
+      >
+        بازنشسته گرامی لطفا به نکات زیر توجه فرمایید
+      </div>
+    </div> -->
+  </div>
+  <div *ngIf="showSelfInfoDiv" class="loginInput3 row">
+    <img
+      style="margin-top: 14px"
+      src="../../assets/newassets/logo1.png"
+      alt=""
+    />
+    <h5 style="color: #d95e63; font-weight: bold">کلینیک آتیه</h5>
+    <h6
+      style="
+        color: #27abb7;
+        font-weight: bold;
+        padding-right: 90px;
+        padding-left: 90px;
+      "
+    >
+      تکمیل اطلاعات شخصی
+    </h6>
+
+    <div>
+      <form
+        style="margin-top: 22px"
+        [formGroup]="form3"
+        (ngSubmit)="form.valid && onSubmitForm3()"
+      >
+        <div class="row">
+          <div class="col-md-6">
+            <label class="labelClass"> نام :</label>
+            <input
+              formControlName="FirstName"
+              style="
+                font-family: 'Yekan';
+                font-size: 17px;
+                text-align: right;
+                box-shadow: 0 0 5px rgba(0, 80, 80, 0.4);
+                border-radius: 4px;
+                margin-top: 8px;
+                border-radius: 7px;
+                height: 44px;
+                /* padding-top: 6px;
+            padding-right: 9px; */
+                padding-top: 10px;
+                padding-right: 14px;
+              "
+              type="text"
+              name="username"
+              id="username"
+              class="form__input"
+              placeholder="نام "
+            />
+          </div>
+          <div class="col-md-6">
+            <label class="labelClass"> نام خانوادگی :</label>
+            <input
+              formControlName="LastName"
+              style="
+                font-family: 'Yekan';
+                box-shadow: 0 0 5px rgba(0, 80, 80, 0.4);
+                border-radius: 4px;
+                font-size: 17px;
+                text-align: right;
+                margin-top: 8px;
+                border-radius: 7px;
+                height: 44px;
+                padding-top: 6px;
+                padding-right: 9px;
+              "
+              type="text"
+              class="form__input"
+              placeholder="نام خانوادگی"
+            />
+          </div>
+        </div>
+        <div style="margin-top: -12px" class="row">
+          <div class="col-md-6">
+            <label class="labelClass">شماره ملی :</label>
+            <input
+              formControlName="NID"
+              style="
+                font-family: 'Yekan';
+                box-shadow: 0 0 5px rgba(0, 80, 80, 0.4);
+                border-radius: 4px;
+                font-size: 17px;
+                text-align: right;
+                margin-top: 8px;
+                border-radius: 7px;
+                height: 44px;
+                padding-top: 6px;
+                padding-right: 9px;
+              "
+              type="text"
+              class="form__input"
+              placeholder="شماره ملی"
+            />
+          </div>
+          <div class="col-md-6">
+            <label class="labelClass">شماره تماس :</label>
+            <input
+              formControlName="Mobile"
+              style="
+                font-family: 'Yekan';
+                box-shadow: 0 0 5px rgba(0, 80, 80, 0.4);
+                border-radius: 4px;
+                font-size: 17px;
+                text-align: right;
+                margin-top: 8px;
+                border-radius: 7px;
+                height: 44px;
+                padding-top: 6px;
+                padding-right: 9px;
+              "
+              type="text"
+              class="form__input"
+              placeholder="شماره تماس"
+            />
+          </div>
+        </div>
+        <div style="margin-top: -12px" class="row">
+          <div class="col-md-6">
+            <label class="labelClass">تاریخ تولد :</label>
+
+            <div class="input-group">
+              <input
+                class="form__input"
+                style="
+                  font-family: 'Yekan';
+                  box-shadow: 0 0 5px rgba(0, 80, 80, 0.4);
+                  border-radius: 4px;
+                  font-size: 17px;
+                  text-align: right;
+                  margin-top: 8px;
+                  border-radius: 7px;
+                  height: 44px;
+                  padding-top: 10px;
+                  padding-right: 14px;
+                "
+                placeholder="تاریخ تولد را انتخاب کنید"
+                (click)="d.toggle()"
+                #dp
+                name="dp"
+                formControlName="Birthday"
+                [firstDayOfWeek]="6"
+                placement="top"
+                ngbDatepicker
+                [minDate]="{ year: 1250, month: 1, day: 1 }"
+                [maxDate]="{ year: 1400, month: 12, day: 31 }"
+                [footerTemplate]="footerTemplate1"
+                #d="ngbDatepicker"
+              />
+              <!-- [ngModelOptions]="{standalone: true}" -->
+              <!-- [(ngModel)]="ngStart" -->
+              <!-- placeholder=" {{ form.get('start').value }}" -->
+              <div class="input-group-append"></div>
+
+              <ng-template #footerTemplate1>
+                <hr class="my-0" />
+                <button
+                  style="width: unset !important"
+                  class="btn btn-info btn-sm m-2 float-left"
+                  (click)="
+                    this.form3.get('Birthday').setValue(calendar.getToday());
+                    d.close()
+                  "
+                >
+                  امروز
+                </button>
+                <button
+                  style="width: unset !important"
+                  class="btn btn-secondary btn-sm m-2 float-right"
+                  (click)="d.close()"
+                >
+                  بستن
+                </button>
+              </ng-template>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label class="labelClass"> جنسیت :</label>
+            <div
+              style="
+                direction: ltr !important ;
+                display: flex;
+                justify-content: center;
+              "
+              class="col"
+            >
+              <mat-radio-group
+                aria-labelledby="example-radio-group-label"
+                class="example-radio-group"
+                formControlName="Gender"
+              >
+                <mat-radio-button
+                  class="example-radio-button"
+                  *ngFor="let select of selectMode"
+                  [value]="select"
+                >
+                  {{ select }}
+                </mat-radio-button>
+              </mat-radio-group>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <input
+            style="font-size: 18px; margin-top: 0"
+            type="submit"
+            value="ثبت اطلاعات"
+            class="btn"
+          />
+        </div>
+      </form>
+    </div>
+
+    <!-- <div *ngIf="!showSelfInfoDiv" class="message1">
+      <div
+        class="col-md-12"
+        style="
+          background-color: #e3fbb6;
+          color: #8e3204;
+          font-weight: initial;
+          padding: 8px;
+          border-radius: 9px;
+          padding-right: 40px;
+          padding-left: 40px;
+        "
+      >
+        بازنشسته گرامی لطفا به نکات زیر توجه فرمایید
+      </div>
+    </div>
+    <div *ngIf="!showSelfInfoDiv" class="message2">
+      <div
+        class="col-md-12"
+        style="
+          background-color: #e3fbb6;
+          color: #8e3204;
+          font-weight: initial;
+          padding: 8px;
+          border-radius: 9px;
+          padding-right: 40px;
+          padding-left: 40px;
+        "
+      >
+        بازنشسته گرامی لطفا به نکات زیر توجه فرمایید
+      </div>
+    </div>
+    <div *ngIf="!showSelfInfoDiv" class="message3">
+      <div
+        class="col-md-12"
+        style="
+          background-color: #ffe4a9;
+          color: #8e3204;
+          font-weight: initial;
+          padding: 8px;
+          border-radius: 9px;
+          padding-right: 40px;
+          padding-left: 40px;
+        "
+      >
+        بازنشسته گرامی لطفا به نکات زیر توجه فرمایید
+      </div>
+    </div> -->
+  </div>
+  <div *ngIf="showFamilyInfoDiv" class="loginInput3 row">
+    <img
+      style="margin-top: 14px"
+      src="../../assets/newassets/logo1.png"
+      alt=""
+    />
+    <h5 style="color: #d95e63; font-weight: bold">کلینیک آتیه</h5>
+    <h6
+      style="
+        color: #27abb7;
+        font-weight: bold;
+        padding-right: 90px;
+        padding-left: 90px;
+      "
+    >
+      تکمیل اطلاعات همسر
+    </h6>
+
+    <div>
+      <form
+        style="margin-top: 22px"
+        [formGroup]="form4"
+        (ngSubmit)="form.valid && onSubmitForm4()"
+      >
+        <div class="row">
+          <div class="col-md-6">
+            <label class="labelClass"> نام :</label>
+            <input
+              formControlName="FirstName"
+              style="
+                font-family: 'Yekan';
+                font-size: 17px;
+                text-align: right;
+                box-shadow: 0 0 5px rgba(0, 80, 80, 0.4);
+                border-radius: 4px;
+                margin-top: 8px;
+                border-radius: 7px;
+                height: 44px;
+                /* padding-top: 6px;
+            padding-right: 9px; */
+                padding-top: 10px;
+                padding-right: 14px;
+              "
+              type="text"
+              name="username"
+              id="username"
+              class="form__input"
+              placeholder="نام "
+            />
+          </div>
+          <div class="col-md-6">
+            <label class="labelClass"> نام خانوادگی :</label>
+            <input
+              formControlName="LastName"
+              style="
+                font-family: 'Yekan';
+                box-shadow: 0 0 5px rgba(0, 80, 80, 0.4);
+                border-radius: 4px;
+                font-size: 17px;
+                text-align: right;
+                margin-top: 8px;
+                border-radius: 7px;
+                height: 44px;
+                padding-top: 6px;
+                padding-right: 9px;
+              "
+              type="text"
+              class="form__input"
+              placeholder="نام خانوادگی"
+            />
+          </div>
+        </div>
+        <div class="row" style="margin-top: -12px">
+          <div class="col-md-6">
+            <label class="labelClass">شماره ملی :</label>
+            <input
+              formControlName="NID"
+              style="
+                font-family: 'Yekan';
+                box-shadow: 0 0 5px rgba(0, 80, 80, 0.4);
+                border-radius: 4px;
+                font-size: 17px;
+                text-align: right;
+                margin-top: 8px;
+                border-radius: 7px;
+                height: 44px;
+                padding-top: 6px;
+                padding-right: 9px;
+              "
+              type="text"
+              class="form__input"
+              placeholder="شماره ملی"
+            />
+          </div>
+          <div class="col-md-6">
+            <label class="labelClass">شماره تماس :</label>
+            <input
+              formControlName="Mobile"
+              style="
+                font-family: 'Yekan';
+                box-shadow: 0 0 5px rgba(0, 80, 80, 0.4);
+                border-radius: 4px;
+                font-size: 17px;
+                text-align: right;
+                margin-top: 8px;
+                border-radius: 7px;
+                height: 44px;
+                padding-top: 6px;
+                padding-right: 9px;
+              "
+              type="text"
+              class="form__input"
+              placeholder="شماره تماس"
+            />
+          </div>
+        </div>
+        <div class="row" style="margin-top: -12px">
+          <div class="col-md-6">
+            <label class="labelClass">تاریخ تولد :</label>
+
+            <div class="input-group">
+              <input
+                class="form__input"
+                style="
+                  font-family: 'Yekan';
+                  box-shadow: 0 0 5px rgba(0, 80, 80, 0.4);
+                  border-radius: 4px;
+                  font-size: 17px;
+                  text-align: right;
+                  margin-top: 8px;
+                  border-radius: 7px;
+                  height: 44px;
+                  padding-top: 10px;
+                  padding-right: 14px;
+                "
+                placeholder="تاریخ تولد را انتخاب کنید"
+                (click)="d.toggle()"
+                #dp
+                name="dp"
+                formControlName="Birthday"
+                [firstDayOfWeek]="6"
+                placement="top"
+                ngbDatepicker
+                [minDate]="{ year: 1250, month: 1, day: 1 }"
+                [maxDate]="{ year: 1400, month: 12, day: 31 }"
+                [footerTemplate]="footerTemplate1"
+                #d="ngbDatepicker"
+              />
+              <!-- [ngModelOptions]="{standalone: true}" -->
+              <!-- [(ngModel)]="ngStart" -->
+              <!-- placeholder=" {{ form.get('start').value }}" -->
+              <div class="input-group-append"></div>
+
+              <ng-template #footerTemplate1>
+                <hr class="my-0" />
+                <button
+                  style="width: unset !important"
+                  class="btn btn-info btn-sm m-2 float-left"
+                  (click)="
+                    this.form3.get('Birthday').setValue(calendar.getToday());
+                    d.close()
+                  "
+                >
+                  امروز
+                </button>
+                <button
+                  style="width: unset !important"
+                  class="btn btn-secondary btn-sm m-2 float-right"
+                  (click)="d.close()"
+                >
+                  بستن
+                </button>
+              </ng-template>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label class="labelClass"> جنسیت :</label>
+            <div
+              style="
+                direction: ltr !important ;
+                display: flex;
+                justify-content: center;
+              "
+              class="col"
+            >
+              <mat-radio-group
+                aria-labelledby="example-radio-group-label"
+                class="example-radio-group"
+                formControlName="Gender"
+              >
+                <mat-radio-button
+                  class="example-radio-button"
+                  *ngFor="let select of selectMode"
+                  [value]="select"
+                >
+                  {{ select }}
+                </mat-radio-button>
+              </mat-radio-group>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <input
+            style="font-size: 18px; margin-top: 0"
+            type="submit"
+            value="ثبت اطلاعات"
+            class="btn"
+          />
+          <input
+            (click)="notMarried()"
+            readonly
+            style="
+              font-size: 18px;
+              margin-top: 0;
+              background-color: #0675b7 !important;
+              color: #fff !important;
+            "
+            value="متاهل نیستم"
+            class="btn"
+          />
+        </div>
+      </form>
+    </div>
+    <!-- <a
+      style="
+        color: #10939f;
+        font-weight: bold;
+
+        position: relative;
+        bottom: 10px;
+      "
+      href=""
+    >
+      <u>رمز عبور را فراموش کردم</u>
+    </a> -->
+    <!-- <div *ngIf="showMessage" class="message1">
+      <div
+        class="col-md-12"
+        style="
+          background-color: #e3fbb6;
+          color: #8e3204;
+          font-weight: initial;
+          padding: 8px;
+          border-radius: 9px;
+          padding-right: 40px;
+          padding-left: 40px;
+        "
+      >
+        بازنشسته گرامی لطفا به نکات زیر توجه فرمایید
+      </div>
+    </div>
+    <div *ngIf="showMessage" class="message2">
+      <div
+        class="col-md-12"
+        style="
+          background-color: #e3fbb6;
+          color: #8e3204;
+          font-weight: initial;
+          padding: 8px;
+          border-radius: 9px;
+          padding-right: 40px;
+          padding-left: 40px;
+        "
+      >
+        بازنشسته گرامی لطفا به نکات زیر توجه فرمایید
+      </div>
+    </div>
+    <div *ngIf="showMessage" class="message3">
+      <div
+        class="col-md-12"
+        style="
+          background-color: #ffe4a9;
+          color: #8e3204;
+          font-weight: initial;
+          padding: 8px;
+          border-radius: 9px;
+          padding-right: 40px;
+          padding-left: 40px;
+        "
+      >
+        بازنشسته گرامی لطفا به نکات زیر توجه فرمایید
+      </div>
+    </div> -->
+  </div>
+</div>
+
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "square-jelly-box" [fullScreen] = "true">
+  <p style="color: white; font-family: 'IRANSans' !important;" > درحال پردازش... </p>
+</ngx-spinner>

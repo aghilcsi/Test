@@ -1,0 +1,140 @@
+/*!
+
+=========================================================
+* Material Dashboard Angular - v2.5.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/evaluationSystem2
+* Copyright 2019 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://github.com/creativetimofficial/evaluationSystem2/blob/master/LICENSE.md)
+
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+*/
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@import "core/variables";
+@import "core/mixins";
+@import "~bootstrap/scss/bootstrap";
+
+// Core Components
+@import "core/buttons";
+@import "core/checkboxes";
+@import "core/radios";
+@import "core/forms";
+@import "core/input-group";
+@import "core/images";
+@import "core/navbar";
+@import "core/alerts";
+@import "core/type";
+@import "core/tabs";
+@import "core/tooltip";
+@import "core/popover";
+@import "core/dropdown";
+@import "core/togglebutton";
+@import "core/ripples";
+@import "core/footers";
+@import "core/sidebar-and-main-panel";
+@import "core/fixed-plugin";
+@import "core/tables";
+@import "core/misc";
+
+@import "core/cards";
+@import "core/cards/card-stats";
+@import "core/cards/card-profile";
+@import "core/cards/card-plain";
+
+//plugin scss
+@import "core/plugins/animate";
+@import "core/plugins/chartist";
+@import "core/plugins/perfect-scrollbar";
+
+@import "core/responsive";
+
+@import "core/angular-modal.scss";
+.ngb-highlight {
+  font-weight: 700;
+  //   color: yellow;
+
+  //   background-color: #737373;
+  color: #f22a2a;
+  background-color: #d2cfcf;
+  font-size: 19px;
+}
+.mat-tooltip {
+  /* your own custom styles here */
+  /* e.g. */
+  color: yellow;
+}
+.my_tooltip {
+  font-size: 15px;
+  background: azure;
+  font-family: "Titrbold";
+  border-radius: 20px !important;
+  // border: #f22a2a;
+}
+.my_tooltip6 {
+  font-size: 15px;
+  background: azure;
+  font-family: "Yekan";
+  border-radius: 20px !important;
+  // width: 800px;
+  // border: #f22a2a;
+}
+.my_tooltip3 {
+  position: relative !important;
+  font-size: 15px;
+  background: azure;
+  font-family: "Titrbold";
+  border-radius: 20px !important;
+  z-index: 99999999999999 !important;
+  margin-right: 170px !important;
+
+
+}
+
+.my_tooltip2 {
+  font-size: 12px;
+  background: azure;
+  font-family: "Titrbold";
+  border-radius: 20px !important;
+  // border: #f22a2a;
+}
+//   .my-modalbox{
+//       background-color: #f22a2a;
+//       color: #f22a2a;
+//   }
+
+@font-face {
+  font-family: "Titrbold";
+  src: url("../font/titrbold.woff") format("woff");
+}
+
+/* @font-face {
+     font-family: Yekan;
+     src: "./yekan.eot";
+   } */
+/* set font */
+@font-face {
+  font-family: "Yekan";
+  src: url("..//font/apaFont.woff2") format("woff2");
+}
+h4,
+button {
+  font-family: "Yekan" !important;
+}
+.mat-dialog-container {
+  // background: linear-gradient(to top, #a8d6ff, #f6fafb);
+  // background: linear-gradient(to top, #c9e5ff, #f6fafb);
+  // background: linear-gradient(to top, #89f1ff, #f6fafb);
+  // TODO :color
+  background-color: #eaeaea;
+  margin-bottom: 53%;
+}
+//   * {
+//     font-family: "Titrbold" !important;
+//   }

@@ -1,0 +1,748 @@
+<div class="background">
+  <!-- <mat-card>
+    <div></div>
+  </mat-card> -->
+  <img class="logo" src="../../assets/newassets/irrep_logo.png" alt="" />
+  <h4 *ngIf="showAbclDiv" class="logoText2">آزمونABCl</h4>
+  <h4 *ngIf="showAsrDiv" class="logoText3">آزمونASR</h4>
+  <div>
+    <div class="atieh-logo">
+      <img  src="../../assets/newassets/logo1.png" alt="atieh" />
+      <h5 style="color: red;">گروه آتیه درخشان ذهن</h5>
+    </div>    
+  </div>
+
+  <button
+    id="groupMainHelpElement5"
+    style="left: 138px"
+    (click)="startMainHelpTour()"
+    *ngIf="!showAsrDiv && !showAbclDiv && !showSendToChild && !showSelfInfoDiv && !showColleaguesList"
+    class="helpButton9"
+    matTooltip="راهنمای کار با سامانه"
+    mat-mini-fab
+  >
+    <mat-icon>info</mat-icon>
+  </button>
+  <button
+    style="left: 138px"
+    (click)="backToOrigin()"
+    *ngIf="showSendToChild"
+    class="helpButton9"
+    mat-mini-fab
+    matTooltip="بازگشت به صفحه اصلی"
+  >
+    <mat-icon>home</mat-icon>
+  </button>
+  <button
+    style="left: 138px"
+    (click)="backToOrigin()"
+    matTooltip="بازگشت به صفحه اصلی"
+    *ngIf="showSelfInfoDiv && !showSendToChild && !showAsrDiv && !showAbclDiv || showColleaguesList"
+    class="helpButton9"
+    mat-mini-fab
+  >
+    <mat-icon>home</mat-icon>
+  </button>
+
+  <button
+    id="groupMainHelpElement4"
+    style="left: 88px"
+    *ngIf="!showAsrDiv && !showAbclDiv"
+    class="helpButton8"
+    mat-mini-fab
+    matTooltip="مشاهده پروفایل"
+    (click)="saveState();showProfile()"
+  >
+    <mat-icon>person</mat-icon>
+  </button>
+
+  <button
+    id="groupMainHelpElement3"
+    (click)="logOut()"
+    matTooltip="خروج از سامانه"
+    *ngIf="!showAsrDiv && !showAbclDiv"
+    class="helpButton"
+    mat-mini-fab
+  >
+    <!-- <mat-icon> -->
+    <img
+      style="
+        color: white;
+        transform: rotate(180deg);
+        left: 4px;
+        top: -12px;
+        width: 24px;
+      "
+      class="logo2"
+      src="../../assets/logout_black_24d.svg"
+      alt=""
+    />
+    <!-- </mat-icon> -->
+  </button>
+
+  <!-- <button
+    style="left: 278px"
+    (click)="startAddGroupHelpTour()"
+    *ngIf="showAsrDiv || showAbclDiv"
+    class="helpButton2"
+    matTooltip="راهنمای کار با سامانه"
+    mat-mini-fab
+  >
+    <mat-icon>info</mat-icon>
+  </button> -->
+
+  <button
+    style="left: 230px"
+    *ngIf="showAsrDiv || showAbclDiv"
+    class="helpButton2"
+    mat-mini-fab
+    matTooltip="مشاهده پروفایل"
+    (click)="saveState();showProfile()"
+  >
+    <mat-icon>person</mat-icon>
+  </button>
+  <button
+    id="groupAddHelpElement4"
+    style="left: 184px"
+    (click)="backToOrigin()"
+    *ngIf="showAsrDiv || showAbclDiv"
+    class="helpButton2"
+    mat-mini-fab
+    matTooltip="بازگشت به صفحه اصلی"
+  >
+    <mat-icon>home</mat-icon>
+  </button>
+  <button
+    (click)="logOut()"
+    matTooltip="خروج از سامانه"
+    *ngIf="showAsrDiv || showAbclDiv"
+    class="helpButton2"
+    mat-mini-fab
+  >
+    <!-- <mat-icon> -->
+    <img
+      style="
+        color: white;
+        transform: rotate(180deg);
+        left: 4px;
+        top: -12px;
+        width: 24px;
+      "
+      src="../../assets/logout_black_24d.svg"
+      alt=""
+    />
+  </button>
+
+  <img src="../../assets/newassets/wave3.svg" alt="" />
+  <div style="display: flex; justify-content: center">
+    <!-- first div -->
+    <div
+      id="groupMainHelpElement1"
+      *ngIf="showFirstDIv"
+      (click)="saveState();showFirstDIv = false; showAsrDiv = true; gotoAsr()"
+      class="loginInput1"
+    >
+      <img
+        style="width: 80px; margin-top: 18px"
+        src="../../assets/newassets/png/042-online test.png"
+        alt=""
+      />
+      <h3 style="color: #27abb7; font-weight: bold; margin-top: 20px">
+        آزمون ASR
+      </h3>
+      <h6 style="padding: 15px; margin-left: 8px">
+        آزمون ASR یک پرسشنامه خودسنجی از ارزیابی مشکلات عاطفی و رفتاری،
+        عملکردهای سازگارانه و بررسی شایستگی ها و توانمندی های شماست.
+      </h6>
+    </div>
+    <div
+      id="groupMainHelpElement2"
+      *ngIf="showFirstDIv"
+      (click)="saveState();showFirstDIv = false; showAbclDiv = true; gotoAbcl()"
+      class="loginInput2"
+    >
+      <!-- width: 6vw; -->
+      <img
+        style="width: 80px; margin-top: 18px"
+        src="../../assets/newassets/png/012-online test.png"
+        alt=""
+      />
+      <h3 style="color: #27abb7; font-weight: bold; margin-top: 20px">
+        آزمون ABCl
+      </h3>
+      <h6 style="padding: 15px; margin-left: 8px; margin-top: -20px !important;">
+        در آزمون ABCL شما می توانید در مورد دوست و همکار خود اظهار نظر نمایید
+        . نام دوست و همکار شما در قسمت انجام آزمون موجود است
+        همچنین شما این آزمون را باید برای یکی از اعضاء نزدیک خانواده خود(همسر، پدر،مادر و...) ارسال کرده تا ایشان در مورد شما اظهار نظر نماید
+      </h6>
+    </div>
+    <!-- asr div -->
+    <div style="display: flex; justify-content: center" *ngIf="showAsrDiv">
+      <div id="groupAddHelpElement1" (click)="saveState();doAsrTest(1)" class="loginInput_do_asr">
+        <img
+          style="width: 80px; margin-top: 18px"
+          src="../../assets/newassets/png/042-online test.png"
+          alt=""
+        />
+        <h3 style="color: #27abb7; font-weight: bold; margin-top: 20px">
+          انجام آزمون ASR
+        </h3>
+      </div>
+      <!-- <div
+        id="groupAddHelpElement2"
+        (click)="
+          showAsrDiv = true; selectedTest = 'asr'; doTestNew(2);
+        "
+        class="loginInput4"
+      >
+
+        <img
+          style="width: 80px; margin-top: 18px"
+          src="../../assets/newassets/webinar.svg"
+          alt=""
+        />
+        <h3 style="color: #27abb7; font-weight: bold; margin-top: 20px">
+          ارجاع آزمون به همکار
+        </h3>
+      </div> -->
+      <div
+        id="groupAddHelpElement3"
+        (click)="saveState();getTestReport('asr')"
+        class="loginInput_asr_report"
+      >
+        <!-- width: 6vw; -->
+        <img
+          style="width: 80px; margin-top: 18px"
+          src="../../assets/newassets/presentation2.svg"
+          alt=""
+        />
+        <h3 style="color: #27abb7; font-weight: bold; margin-top: 20px">
+          مشاهده نتایج
+        </h3>
+      </div>
+    </div>
+    <!-- abcl div -->
+    <div style="display: flex; justify-content: center" *ngIf="showAbclDiv">
+      
+      <!-- <div
+        id="groupAddHelpElement1"
+        (click)="saveState();doAbclTest(1)"
+        class="do_abcl_test"
+        style="display: none;"
+      >
+        <img
+          style="width: 80px; margin-top: 18px"
+          src="../../assets/newassets/png/012-online test.png"
+          alt=""
+        />
+        <h3 style="color: #27abb7; font-weight: bold; margin-top: 20px">
+          انجام آزمون ABCL
+        </h3>
+      </div> -->
+
+      <div
+        id="groupAddHelpElement2"
+        (click)="
+          showAbclDiv = true; selectedTest = 'abcl'; doTestNew(2);
+        "
+        class="loginInput5"
+      >
+        <!-- width: 6vw; -->
+        <img
+          style="width: 80px; margin-top: 18px"
+          src="../../assets/newassets/webinar.svg"
+          alt=""
+        />
+        <h3  style="color: #27abb7; font-weight: bold; margin-top: 20px">
+          ارجاع آزمون به یکی از اقوام درجه یک
+        </h3>
+      </div>
+
+      <div
+        id="groupAddHelpElement3"
+        (click)="saveState();getUserReportsList();"
+        class="loginInput3"
+      >
+        <!-- width: 6vw; -->
+        <img
+          style="width: 80px; margin-top: 18px"
+          src="../../assets/newassets/presentation2.svg"
+          alt=""
+        />
+        <h3 style="color: #27abb7; font-weight: bold; margin-top: 20px">
+          مشاهده نتایج
+        </h3>
+      </div>
+
+      <div
+        id="groupAddHelpElement3"
+        (click)="saveState();getUserColleagues();"
+        class="loginInput4"
+      >
+        <!-- width: 6vw; -->
+        <img
+          style="width: 80px; margin-top: 18px"
+          src="../../assets/newassets/workers.png"
+          alt=""
+        />
+        <h3 style="color: #27abb7; font-weight: bold; margin-top: 20px">
+          مشاهده لیست همکاران
+        </h3>
+      </div>
+
+
+    </div>
+
+    <div *ngIf="showUserReportsListPage">
+      <div class="container">
+        <div class="card">
+          <div class="card-body reports-card">
+            <div *ngIf="userReportsListUrls.length > 0;else noReportUrls" style="display: flex; flex-direction: column; align-items: center;">
+                <div *ngFor="let url of userReportsListUrls" class="userReportsRows">
+                  <h5 style="font-family: 'Titrbold' !important; color: #106339;">{{url.title}}</h5>
+                  <a target="_blank" [href]="url.url" class="userReportLink">مشاهده گزارش</a>
+                </div>
+            </div>
+            <ng-template #noReportUrls>
+              <div>
+                <h6>
+                  کاربر گرامی، تا این لحظه آزمونی برای شما انجام نشده است.
+                </h6>
+              </div>
+            </ng-template>
+          </div>
+          <div class="card-footer" style="justify-content: center;">
+            <button class="btn btn-danger userReportBackBtn" (click)="showUserReportsListPage=false; showAbclDiv=true;">
+              بازگشت
+            </button>
+          </div>
+        </div>
+      </div>
+  </div>
+
+    <!-- send to child -->
+    <div style="display: flex; justify-content: center" *ngIf="showSendToChild">
+      <div (click)="doTestNew(3)" class="loginInput1" style="padding-top: 28px">
+        <img
+          style="width: 80px; margin-top: 18px"
+          src="../../assets/newassets/webinar.svg"
+          alt=""
+        />
+        <h3 style="color: #27abb7; font-weight: bold; margin-top: 20px">
+          ارجاع آزمون به فرزند دوم
+        </h3>
+      </div>
+      <div (click)="doTestNew(2)" class="loginInput2" style="padding-top: 28px">
+        <!-- width: 6vw; -->
+        <img
+          style="width: 80px; margin-top: 18px"
+          src="../../assets/newassets/webinar.svg"
+          alt=""
+        />
+        <h3 style="color: #27abb7; font-weight: bold; margin-top: 20px">
+          ارجاع آزمون به فرزند اول
+        </h3>
+      </div>
+    </div>
+
+    <div *ngIf="showColleaguesList" class="loginInput12 row ">
+      <h6
+        style="
+          color: #27abb7;
+          font-weight: bold;
+          padding-right: 90px;
+          padding-left: 90px;
+        "
+      >
+         همکاران ارجاع داده شده جهت اظهار نظر
+      </h6>
+      
+      <div>
+        <div *ngIf="mycolleagues.length > 0;else noColleague">
+          <div  *ngFor="let person of mycolleagues" style="margin: 1rem; border-bottom: 1px solid #bebebe;">
+              <div style="display: flex;justify-content: space-between;">
+                <div style="color: #27abb7; font-weight: bold;">
+                  {{person.user.FirstName+' '+person.user.LastName}}
+                </div>
+                <div>
+                  <a class="colleague-do-test" style="padding: 5px 10px; background-color: #27abb7; color: white;border-radius: 5px;" [href]="person.url">انجام آزمون</a>
+                </div>
+              </div>
+          </div>
+        </div>
+        <ng-template #noColleague style="font-weight: bold;margin: 1rem;">
+          <p>اطلاعاتی جهت نمایش موجود نمی باشد</p>
+        </ng-template>
+        <input
+          (click)="saveState();this.showColleaguesList=false;this.showAbclDiv = true;"
+          style="font-size: 18px; margin-top: 0;    background-color: red; border-radius: 5px;"
+          type="button"
+          value="بازگشت"
+          class="btn btn-colleague"
+        />
+      </div>
+    </div>
+
+    <div *ngIf="showSelfInfoDiv" class="loginInput12 row">
+      <h6
+        style="
+          color: #27abb7;
+          font-weight: bold;
+          padding-right: 90px;
+          padding-left: 90px;
+        "
+      >
+        پروفایل کاربری
+      </h6>
+
+      <div>
+        <form
+          style="margin-top: 22px; padding-right: 22px; padding-left: 22px"
+          [formGroup]="form3"
+          (ngSubmit)="form.valid && onSubmitForm3()"
+        >
+          <div class="row">
+            <div class="col-md-6">
+              <label class="labelClass"> نام :</label>
+              <input
+                formControlName="FirstName"
+                style="
+                  font-family: 'Yekan';
+                  font-size: 17px;
+                  text-align: right;
+                  box-shadow: 0 0 5px rgba(0, 80, 80, 0.4);
+                  border-radius: 4px;
+                  margin-top: 8px;
+                  border-radius: 7px;
+                  height: 44px;
+                  /* padding-top: 6px;
+              padding-right: 9px; */
+                  padding-top: 10px;
+                  padding-right: 14px;
+                "
+                type="text"
+                name="username"
+                id="username"
+                class="form__input"
+                placeholder="نام "
+              />
+            </div>
+            <div class="col-md-6">
+              <label class="labelClass"> نام خانوادگی :</label>
+              <input
+                formControlName="LastName"
+                style="
+                  font-family: 'Yekan';
+                  box-shadow: 0 0 5px rgba(0, 80, 80, 0.4);
+                  border-radius: 4px;
+                  font-size: 17px;
+                  text-align: right;
+                  margin-top: 8px;
+                  border-radius: 7px;
+                  height: 44px;
+                  padding-top: 6px;
+                  padding-right: 9px;
+                "
+                type="text"
+                class="form__input"
+                placeholder="نام خانوادگی"
+              />
+            </div>
+          </div>
+          <div style="margin-top: -12px" class="row">
+            <div class="col-md-6">
+              <label class="labelClass">شماره ملی :</label>
+              <input
+                readonly
+                disabled="true"
+                formControlName="NID"
+                style="
+                  font-family: 'Yekan';
+                  box-shadow: 0 0 5px rgba(0, 80, 80, 0.4);
+                  border-radius: 4px;
+                  font-size: 17px;
+                  text-align: right;
+                  margin-top: 8px;
+                  border-radius: 7px;
+                  height: 44px;
+                  padding-top: 6px;
+                  padding-right: 9px;
+                "
+                type="text"
+                class="form__input"
+                placeholder="شماره ملی"
+              />
+            </div>
+            <div class="col-md-6">
+              <label class="labelClass">شماره تماس :</label>
+              <input
+                formControlName="Mobile"
+                style="
+                  font-family: 'Yekan';
+                  box-shadow: 0 0 5px rgba(0, 80, 80, 0.4);
+                  border-radius: 4px;
+                  font-size: 17px;
+                  text-align: right;
+                  margin-top: 8px;
+                  border-radius: 7px;
+                  height: 44px;
+                  padding-top: 6px;
+                  padding-right: 9px;
+                "
+                type="text"
+                class="form__input"
+                placeholder="شماره تماس"
+              />
+            </div>
+          </div>
+          <div style="margin-top: -12px" class="row">
+            <div class="col-md-6">
+              <label class="labelClass">تاریخ تولد :</label>
+
+              <div class="input-group">
+                <input
+                  class="form__input"
+                  style="
+                    font-family: 'Yekan';
+                    box-shadow: 0 0 5px rgba(0, 80, 80, 0.4);
+                    border-radius: 4px;
+                    font-size: 17px;
+                    text-align: right;
+                    margin-top: 8px;
+                    border-radius: 7px;
+                    height: 44px;
+                    padding-top: 10px;
+                    padding-right: 14px;
+                  "
+                  placeholder="تاریخ تولد را انتخاب کنید"
+                  (click)="d.toggle()"
+                  #dp
+                  name="dp"
+                  formControlName="Birthday"
+                  [firstDayOfWeek]="6"
+                  placement="top"
+                  ngbDatepicker
+                  [minDate]="{ year: 1250, month: 1, day: 1 }"
+                  [maxDate]="{ year: 1400, month: 12, day: 31 }"
+                  [footerTemplate]="footerTemplate1"
+                  #d="ngbDatepicker"
+                />
+
+                <div class="input-group-append"></div>
+
+                <ng-template #footerTemplate1>
+                  <hr class="my-0" />
+                  <button
+                    style="width: unset !important"
+                    class="btn btn-info btn-sm m-2 float-left"
+                    (click)="
+                      this.form3.get('Birthday').setValue(calendar.getToday());
+                      d.close()
+                    "
+                  >
+                    امروز
+                  </button>
+                  <button
+                    style="width: unset !important"
+                    class="btn btn-secondary btn-sm m-2 float-right"
+                    (click)="d.close()"
+                  >
+                    بستن
+                  </button>
+                </ng-template>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label class="labelClass"> جنسیت :</label>
+              <div
+                style="
+                  direction: ltr !important ;
+                  display: flex;
+                  justify-content: center;
+                "
+                class="col"
+              >
+                <mat-radio-group
+                  aria-labelledby="example-radio-group-label"
+                  class="example-radio-group"
+                  formControlName="Gender"
+                >
+                  <mat-radio-button
+                    class="example-radio-button"
+                    *ngFor="let select of selectMode"
+                    [value]="select"
+                  >
+                    {{ select }}
+                  </mat-radio-button>
+                </mat-radio-group>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div>
+            <input
+              disabled="true"
+              style="font-size: 18px; margin-top: 0"
+              type="submit"
+              value="ویرایش اطلاعات"
+              class="btn"
+            />
+          </div> -->
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- testLink modal -->
+<ng-template #testLink let-modal>
+  <img src="../../assets/newassets/wave3.svg" alt="" />
+  <button
+    style="
+      margin-left: 8px;
+      left: 12px;
+      position: absolute;
+      margin-top: 15px;
+      color: white;
+    "
+    type="button"
+    class="close"
+    aria-label="Close"
+    (click)="modal.dismiss('Cross click')"
+  >
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <!-- <div style="border: 0 !important" class="modal-header">
+
+  </div> -->
+
+  <div class="modal-body">
+    <div
+      style="
+        direction: rtl;
+        text-align: right;
+        font-family: 'Yekan';
+        font-size: 15px;
+        justify-content: center;
+      "
+      class="row"
+    >
+      <h4 style="color: #27abb7; font-weight: bold">
+        لینک زیر را برای فرد مورد نظر ارسال کنید
+      </h4>
+      <div style="display: flex; justify-content: center" class="col-md-12">
+        <span>
+          <mat-icon
+            (click)="copyTestUrl()"
+            style="
+              color: white;
+              background-color: #27abb7;
+              padding-top: 12px;
+              border-right-width: 0px;
+              border-right-style: solid;
+              padding-right: 29px;
+              padding-left: 10px;
+              padding-bottom: 27px;
+              cursor: pointer;
+            "
+            >copy</mat-icon
+          >
+        </span>
+        <p
+          style="
+            border: 1px solid #d4dadf;
+            padding: 8px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 8px;
+          "
+        >
+          {{ "..." + testUrl.slice(0, 34) }}
+        </p>
+      </div>
+      <div>
+        <h4 style="padding-right: 24px; padding-left: 24px">
+          برای ارسال از طریق شبکه های اجتماعی مختلف روی آنها کلیک کنید
+        </h4>
+        <button
+          class="shareButton"
+          style="background-color: 'rgb(37, 211, 102)'; margin-right: 32px"
+          [url]="testUrl"
+          [title]="shareButtonTitle"
+          [description]="shareButtonDescription"
+          mat-fab
+          shareButton="whatsapp"
+          #waBtn="shareButton"
+        >
+          <fa-icon [icon]="waBtn.icon" size="lg"></fa-icon>
+        </button>
+        <button
+          class="shareButton"
+          style="background-color: 'rgb(0, 136, 204)'"
+          [url]="testUrl"
+          [title]="shareButtonTitle"
+          [description]="shareButtonDescription"
+          mat-fab
+          shareButton="telegram"
+          #tlBtn="shareButton"
+        >
+          <fa-icon [icon]="tlBtn.icon" size="lg"></fa-icon>
+        </button>
+        <button
+          class="shareButton"
+          style="background-color: 'rgb(32, 193, 108)'"
+          [url]="testUrl"
+          [title]="shareButtonTitle"
+          [description]="shareButtonDescription"
+          mat-fab
+          shareButton="sms"
+          #smsBtn="shareButton"
+        >
+          <fa-icon [icon]="smsBtn.icon" size="lg"></fa-icon>
+        </button>
+        <button
+          class="shareButton"
+          style="background-color: 'rgb(255, 150, 28)'"
+          [url]="testUrl"
+          [title]="shareButtonTitle"
+          [description]="shareButtonDescription"
+          mat-fab
+          shareButton="email"
+          #emailBtn="shareButton"
+        >
+          <fa-icon [icon]="emailBtn.icon" size="lg"></fa-icon>
+        </button>
+        <button
+          style="background-color: 'wheat'"
+          class="shareButton"
+          mat-fab
+          (click)="navigateToEita()"
+        >
+          <img
+            style="width: 24px"
+            src="https://eitaa.com/assets/images/logos/site-logo-larg.png"
+            alt=""
+          />
+          <!-- <fa-icon [icon]="copylinkBtn.icon" size="lg"></fa-icon> -->
+        </button>
+        <button
+          style="background-color: 'rgb(96, 125, 139)'"
+          class="shareButton"
+          [url]="testUrl"
+          [title]="shareButtonTitle"
+          [description]="shareButtonDescription"
+          mat-fab
+          shareButton="copy"
+          #copylinkBtn="shareButton"
+        >
+          <fa-icon [icon]="copylinkBtn.icon" size="lg"></fa-icon>
+        </button>
+      </div>
+
+      <!-- </form> -->
+    </div>
+  </div>
+</ng-template>
+
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "square-jelly-box" [fullScreen] = "true">
+  <p style="color: white; font-family: 'IRANSans' !important;" > درحال پردازش... </p>
+</ngx-spinner>

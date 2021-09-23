@@ -1,0 +1,16 @@
+{
+  "appId": "com.atieh.app",
+  "appName": "atieh ",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "server": {
+    "hostname": "rate.pasokhgoo.ir/test/pwa/",
+    "androidScheme": "http"
+  }
+}

@@ -1,0 +1,240 @@
+.main-content {
+  width: 50%;
+  border-radius: 20px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+  margin: 5em auto;
+  display: flex;
+}
+.company__info {
+  // background-color: #008080;
+  background-color: #004d80;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+}
+.fa-android {
+  font-size: 3em;
+}
+@media screen and (max-width: 640px) {
+  .main-content {
+    width: 90%;
+  }
+  .company__info {
+    display: none;
+  }
+  .login_form {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+}
+@media screen and (min-width: 642px) and (max-width: 800px) {
+  .main-content {
+    width: 70%;
+  }
+}
+.row > h2 {
+  color: #004280;
+}
+.login_form {
+  background-color: #fff;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+form {
+  padding: 0 2em;
+}
+.form__input {
+  width: 100%;
+  border: 0px solid transparent;
+  border-radius: 0;
+  border-bottom: 1px solid #aaa;
+  padding: 1em 0.5em 0.5em;
+  padding-left: 2em;
+  outline: none;
+  margin: 1.5em auto;
+  transition: all 0.5s ease;
+}
+.form__input:focus {
+  border-bottom-color: #066baf;
+  border-top-color: #066baf;
+  box-shadow: 0 0 5px rgba(0, 80, 80, 0.4);
+  border-radius: 4px;
+}
+.btn {
+  transition: all 0.5s ease;
+  width: 84%;
+  border-radius: 8px;
+  color: #eeeeee;
+  font-weight: 600;
+  background-color: #10939f;
+  // border: 1px solid rgb(0, 92, 128);
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+}
+.btn:hover,
+.btn:focus {
+  background-color: #eeeeee;
+  color: #10939f;
+}
+.background {
+  background-color: #eeeeee;
+  background-image: url(../../assets/pattern.jpg);
+  background-repeat: repeat;
+  width: 100%;
+  height: 100vh;
+  @media (max-width: 816px) {
+    display: flex;
+    justify-content: center;
+  }
+}
+.headerImage {
+  @media (max-width: 816px) {
+    position: absolute;
+  }
+}
+.loginInput {
+  @media (max-width: 960px) {
+    right: 6%;
+    top: 10rem;
+  }
+  @media (max-width: 816px) {
+    top: 8rem;
+    right: unset !important;
+  }
+  background-color: white;
+  right: 20%;
+  position: absolute;
+  width: 380px;
+  height: 510px;
+  box-shadow: 0px 0px 4px;
+  border-radius: 12px;
+  text-align: center;
+  top: 110px;
+  display: block;
+}
+.loginInput2 {
+  @media (max-width: 960px) {
+    right: 6%;
+  }
+  @media (max-width: 816px) {
+    top: 4px;
+    right: unset !important;
+  }
+  background-color: white;
+  right: 20%;
+  position: absolute;
+  width: 380px;
+  height: 500px;
+  box-shadow: 0px 0px 4px;
+  border-radius: 12px;
+  text-align: center;
+  top: 110px;
+  display: block;
+}
+.loginInput3 {
+  @media (max-width: 960px) {
+    right: 6%;
+  }
+  @media (max-width: 816px) {
+    top: 4px;
+    right: unset !important;
+  }
+  background-color: white;
+  right: 20%;
+  position: absolute;
+  // width: 380px;
+  // height: 868px;
+  height: auto;
+  box-shadow: 0px 0px 4px;
+  border-radius: 12px;
+  text-align: center;
+  top: 40px;
+  display: block;
+  // overflow: auto;
+}
+.message1 {
+  @media (max-width: 816px) {
+    right: 2%;
+    top: 528px;
+  }
+  position: absolute;
+  border-radius: 12px;
+  // top: 156px;
+  top: 46px;
+  display: block;
+  color: #8e3204;
+  right: 420px;
+  width: 370px;
+  margin-left: 100px;
+}
+.message2 {
+  @media (max-width: 816px) {
+    right: 2%;
+    // top: 674px;
+    top: 846px;
+  }
+  position: absolute;
+  border-radius: 12px;
+  // top: 292px;
+  top: 362px;
+
+  display: block;
+  color: #8e3204;
+  right: 420px;
+  width: 370px;
+  margin-left: 100px;
+}
+.message3 {
+  @media (max-width: 816px) {
+    right: 2%;
+    top: 480px;
+  }
+  position: absolute;
+  border-radius: 12px;
+  // top: 212px;
+  // top: 108px;
+  top: 1px;
+  display: block;
+  color: #8e3204;
+  right: 420px;
+  width: 370px;
+  margin-left: 100px;
+}
+.example-radio-group {
+  // display: flex;
+  // flex-direction: column;
+  /* margin: 15px 0; */
+  // margin-top: -5px;
+}
+
+.example-radio-button {
+  margin: 8px;
+  padding: 8px;
+}
+.helpButton9 {
+  @media (max-width: 720px) {
+    // left: 50px !important;
+    // top: 4px;
+    width: 34px;
+    height: 37px;
+    background: #27abb7;
+  }
+  left: 38px;
+  top: 26px;
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  background: #27abb7;
+  border: none;
+}
+
+@media (max-width: 991px){
+  body{
+    position: initial  !important;
+  }
+}

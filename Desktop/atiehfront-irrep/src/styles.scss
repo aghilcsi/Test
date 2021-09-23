@@ -1,0 +1,421 @@
+@import url(./assets/css/style.css);
+
+@font-face {
+  font-family: "Titrbold";
+  src: url("./assets/font/titrbold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Yekan";
+  src: url("./assets/font/apaFont.woff2") format("woff2");
+}
+
+/* toastPosition */
+.toastPosition {
+  bottom: 3%;
+  right: 1%;
+}
+.ngx-toastr {
+  width: 400px !important;
+  direction: rtl !important;
+}
+/* toastTitle */
+.toastTitle {
+  padding-left: 243px;
+  direction: rtl;
+  float: right;
+  font-family: "Titrbold";
+  font-size: 19px;
+}
+/* toastMessage */
+.toastMessage {
+  direction: rtl;
+  float: right;
+  font-family: "Yekan";
+  font-size: 19px;
+}
+th {
+  font-family: "Titrbold";
+}
+label,
+pre {
+  font-family: "Yekan";
+  font-size: 16px;
+  color: #1b1e9f;
+}
+.invalid-feedback {
+  display: none;
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 100%;
+  color: #f44336;
+}
+.form-control {
+  font-size: 19px;
+}
+// add W3.css for basic style
+@import "./assets/styles/w3.css";
+
+.thead-color {
+  background-color: #4191d2;
+  color: white;
+  direction: rtl;
+}
+
+.mat-sort-header-arrow {
+  color: white !important;
+  margin-right: 1% !important;
+}
+
+mat-select,
+mat-option {
+  font-family: "Yekan" !important;
+  text-align: right !important;
+  font-size: 15px !important;
+}
+ngb-datepicker {
+  font-family: "Titrbold" !important;
+}
+mat-select-filter {
+  font-family: "Yekan" !important;
+
+  direction: rtl !important;
+}
+.p-card .p-card-subtitle {
+  font-weight: 400 !important;
+  margin-bottom: 0.5rem !important;
+  color: #6c757d !important;
+  text-align: right !important;
+}
+h4 {
+  font-size: 18px !important;
+}
+td,
+th {
+  font-size: 13px !important;
+}
+.fullWidth {
+  width: 100%;
+}
+.makeDisplayNone {
+  display: none;
+}
+.mat-select-placeholder {
+  color: rgba(0, 0, 0, 0.42);
+  font-size: 15px !important;
+}
+
+.mat-tab-label {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  font-family: "Titrbold" !important;
+}
+.mat-tab-body-content {
+  height: 100%;
+  overflow: auto;
+  font-family: "Yekan" !important;
+}
+.mat-tab-body-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  transition: height 500ms cubic-bezier(0.35, 0, 0.25, 1);
+  height: 500px;
+  max-height: 700px;
+}
+// .angular-editor .angular-editor-wrapper.angular-editor-textarea{
+//   min-height: 5rem;
+//   padding: .5rem .8rem 1rem;
+
+//   background-color: transparent;
+//   overflow-x: hidden;
+//   overflow-y: auto;
+//   position: relative;
+//   border: none !important;
+//  resize: none !important;
+// }
+
+.angular-editor {
+  position: relative;
+  .angular-editor-wrapper {
+    position: relative;
+    .angular-editor-textarea {
+      min-height: 5rem;
+      padding: 0.5rem 0.8rem 1rem 0.8rem;
+      // border: 1px solid #ddd;
+      background-color: transparent;
+      border: none !important;
+      resize: none !important;
+      overflow-x: hidden;
+      overflow-y: auto;
+      // z-index: 2;
+      position: relative;
+      // pointer-events: none;
+    }
+  }
+}
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url(assets/materialfont/MaterialIcons-Regular.ttf); /* For IE6-8 */
+  src: local("Material Icons"), local("MaterialIcons-Regular"),
+    url(assets/materialfont/MaterialIconsOutlined-Regular.otf),
+    url(assets/materialfont/MaterialIconsRound-Regular.otf),
+    url(assets/materialfont/MaterialIconsTwoTone-Regular.otf),
+    url(assets/materialfont/MaterialIconsSharp-Regular.otf);
+}
+
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+.table > thead > tr,
+.table > tbody > tr,
+.table > tfoot > tr,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  padding: 2px 2px !important;
+  vertical-align: middle;
+}
+.mat-raised-button:not([class*="mat-elevation-z"]) {
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  height: 34px !important;
+  width: auto !important;
+  font-size: 12px !important;
+}
+.table > thead > tr > th {
+  padding: 7px !important;
+}
+
+.table th,
+.table td {
+  padding: 0.3rem !important;
+  vertical-align: top;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.card
+  [class*="card-header-"]:not(.card-header-icon):not(.card-header-text):not(.card-header-image) {
+  border-radius: 3px;
+  margin-top: -20px;
+  padding: 12px;
+}
+// .bootstrapModal{
+//   z-index: 999999999999999999999999 !important;
+//   position: absolute;
+//   columns: red  ;
+// }
+// table {
+//   width: 100%;
+// }
+
+// thead, tbody, tr, td, th { display: block; }
+
+// tr:after {
+//   content: ' ';
+//   display: block;
+//   visibility: hidden;
+//   clear: both;
+// }
+
+// thead th {
+//   height: 30px;
+
+//   text-align: right;
+// }
+
+// tbody {
+//   height: 300px;
+//   overflow-y: auto;
+// }
+
+// thead {
+//   /* fallback */
+// }
+
+// tbody td, thead th {
+//   width: 19.2%;
+//   float: right;
+// }
+
+// .example-container {
+//   height: 400px;
+//   overflow: auto;
+// }
+
+// table thead tr{
+//   display:block;
+
+// }
+
+// table th,table td{
+//   // width:100px;//fixed width
+//   // width: auto;
+//   min-width: 8%;
+//   max-width: 100%;
+// }
+
+// table  tbody{
+// display:block;
+// height:200px;
+// overflow:auto;//set tbody to auto
+// }
+// .table-class tr:first-child>td{
+// position: sticky;
+// top: 0;
+// }
+// table, tr td {
+//   border: 1px solid red
+// }
+
+// table, tr td {
+//   border: 1px solid red
+// }
+
+// works
+// tbody {
+//   display: block;
+//   height: 300px;
+//   overflow: auto;
+// }
+// thead, tbody tr {
+//   display: table;
+//   width: 100%;
+//   table-layout: fixed;/* even columns width , fix width of table too*/
+// }
+// thead {
+//   width: calc( 100% - 1em )/* scrollbar is average 1em/16px width, remove it from thead width */
+// }
+// table {
+//   width: 100%;
+// }
+
+// .thead-color {
+//   background-color: #4191d2;
+//   color: white;
+//   direction: ltr;
+//   text-align: right;
+// }
+// thead tr {
+//   direction: rtl !important;
+// }
+// works
+
+// better works
+
+// tbody {
+//   display:block;
+//   max-height:400px;
+//   overflow-y:auto;
+// }
+// thead, tbody tr {
+//   display:table;
+//   width:100%;
+//   table-layout:fixed;
+// }
+
+.thead-color {
+  background-color: #4191d2;
+  color: white;
+  direction: ltr !important;
+  text-align: right !important;
+}
+thead th {
+  direction: rtl !important;
+}
+// better works
+
+.timepicker__actions {
+  display: flex;
+  justify-content: center !important;
+  padding: 15px;
+  background-color: #fff;
+}
+.introjs-tooltipbuttons {
+  text-align: right;
+  white-space: nowrap;
+  font-family: "Titrbold" !important;
+}
+.introjs-skipbutton {
+  box-sizing: content-box;
+  margin-right: 5px;
+  color: #7a7a7a;
+  font-family: "Yekan";
+}
+a {
+  font-family: "Titrbold" !important;
+}
+button:hover {
+  background-color: #eeeeee !important;
+  color: #10939f !important;
+}
+
+@media (max-width: 991px){
+  body{
+    position: initial  !important;
+  }
+}
+
+.mat-tooltip {
+  font-family: 'IRANSans' !important;
+  background-color: #fff;
+  color: #10939f !important;
+  font-weight: bold;
+}
+
+div.atieh-logo{
+
+  display: flex;
+  direction: ltr;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin-left: 1rem;
+  z-index: 999;
+  img{
+    max-width: 5rem;
+  }
+
+  h5{
+    font-size: 75%;
+    font-weight: bold;
+  }
+
+  @media (max-width:570px) {
+    img{
+      max-width: 3rem;
+    }
+  
+    h5{
+      font-size: 50%;
+      font-weight: bold;
+    }
+  }
+}

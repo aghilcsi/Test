@@ -1,0 +1,730 @@
+.background {
+  background-color: #eeeeee;
+  background-image: url(../../assets/pattern.jpg);
+  background-repeat: repeat;
+  width: 100%;
+  height: 100vh;
+}
+.toolbarclass {
+  display: flex;
+  justify-content: center;
+  border-radius: 30px;
+  width: 560px;
+  margin-top: 20px;
+  background: linear-gradient(to right, #177fb3, #086ca6);
+  /* background: linear-gradient(to right, #27b8ff, #0e85ca); */
+  box-shadow: #385671 1px 1px 8px;
+}
+
+// img {
+//   mix-blend-mode: multiply;
+//   width: 100px;
+// }
+
+.menuButtonChild {
+  background-color: #01579b;
+  // font-size: 36px !important;
+  font-size: 20px !important;
+  width: 214px !important;
+  height: 58px !important;
+  font-family: "Titrbold" !important;
+  margin-left: 14px;
+  position: relative;
+  top: 5px;
+  border-radius: 14px;
+}
+.menuButton {
+  background-color: #0099cc;
+  // font-size: 36px !important;
+  font-size: 28px !important;
+  width: 290px !important;
+  height: 70px !important;
+  font-family: "Titrbold" !important;
+  margin-left: 14px;
+  position: relative;
+  top: 5px;
+  border-radius: 14px;
+}
+.menuButton2 {
+  background-color: #9933cc;
+  // font-size: 36px !important;
+  font-size: 28px !important;
+  width: 290px !important;
+  height: 70px !important;
+  font-family: "Titrbold" !important;
+  margin-left: 14px;
+  position: relative;
+  top: 5px;
+  border-radius: 14px;
+}
+.menuButton3 {
+  background-color: #00838f;
+  // font-size: 36px !important;
+  font-size: 28px !important;
+  width: 290px !important;
+  height: 70px !important;
+  font-family: "Titrbold" !important;
+  margin-left: 14px;
+  position: relative;
+  top: 5px;
+  border-radius: 14px;
+}
+
+.cardStyle {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  width: 500px;
+  font-size: 23px;
+  direction: rtl;
+  border-radius: 14px;
+  /* background: linear-gradient(to right, #f7d2f1, #ff7feb); */
+  background: linear-gradient(to right, #f5faff, #d5ebff);
+  justify-content: center;
+  display: flex;
+}
+// .myClass{
+//   color : red;
+//   background-color: red;
+// }
+.firstStyle {
+  background-color: red;
+  color: red;
+}
+.clickedStyle {
+  background-color: yellow;
+  color: red;
+}
+
+.copyButton {
+  background-color: #01579b;
+  font-size: 14px !important;
+
+  font-family: "Yekan" !important;
+  margin-right: 14px;
+  position: relative;
+  top: 4px;
+  border-radius: 14px;
+}
+
+.backButton {
+  // background-color: #ffeb3b !important ;
+  background-color: #007093 !important ;
+  font-size: 12px !important;
+  font-family: "Yekan" !important;
+  margin-right: 14px;
+
+  border-radius: 14px;
+  margin-bottom: 24px;
+  // color: #464646;
+  color: white;
+}
+.backButton:hover {
+  background-color: #1fadd9 !important ;
+}
+
+.shareButton {
+  margin: 8px;
+}
+
+.loginInput1 {
+  @media (max-width: 1024px) {
+    width: 420px;
+    height: 280px;
+    margin-right: 440px;
+  }
+  @media (max-width: 870px) {
+    width: 320px;
+    top: 90px;
+    height: auto;
+    margin-right: 0;
+    padding-top: 0 !important;
+  }
+  background-color: white;
+  // right: 28%;
+  position: absolute;
+  width: 500px;
+  height: 280px;
+  box-shadow: 0px 0px 4px;
+  border-radius: 12px;
+  text-align: center;
+  top: 240px;
+  display: block;
+  cursor: pointer;
+  margin-right: 520px;
+}
+.loginInput2 {
+  @media (max-width: 1024px) {
+    width: 420px;
+    height: 280px;
+    margin-left: 440px;
+  }
+  @media (max-width: 870px) {
+    top: 400px;
+    height: auto;
+    margin-left: 0;
+    padding-top: 0 !important;
+    width: 320px;
+  }
+  background-color: white;
+  // left: 28%;
+
+  margin-left: 520px;
+
+  position: absolute;
+  width: 500px;
+  height: 280px;
+  box-shadow: 0px 0px 4px;
+  border-radius: 12px;
+  text-align: center;
+  top: 240px;
+  display: block;
+  cursor: pointer;
+}
+
+.loginInput3 {
+  @media (max-width: 974px) {
+    // width: 240px;
+    // height: 230px;
+    width: 220px;
+    height: 212px;
+    margin-right: 490px;
+  }
+  @media (max-width: 728px) {
+    padding-top: 0;
+    margin-right: 0;
+    height: auto;
+    // top: 508px;
+    top: 500px;
+  }
+  background-color: white;
+  // right: 28%;
+  position: absolute;
+  width: 284px;
+  height: 242px;
+  box-shadow: 0px 0px 4px;
+  border-radius: 12px;
+  text-align: center;
+  top: 240px;
+  display: block;
+  cursor: pointer;
+  margin-right: 520px;
+  padding-top: 25px;
+}
+
+
+.loginInput4 {
+  @media (max-width: 974px) {
+    // width: 240px;
+    // height: 230px;
+    width: 220px;
+    height: 212px;
+    margin-left: 0;
+  }
+  @media (max-width: 728px) {
+    padding-top: 0;
+    margin-left: 0;
+    height: auto;
+    // top: 300px;
+    top: 285px;
+  }
+  background-color: white;
+  // left: 28%;
+  padding-top: 25px;
+  margin-left: 82px;
+
+  position: absolute;
+  width: 284px;
+  height: 242px;
+  box-shadow: 0px 0px 4px;
+  border-radius: 12px;
+  text-align: center;
+  top: 240px;
+  display: block;
+  cursor: pointer;
+}
+
+.loginInput5 {
+  @media (max-width: 974px) {
+    // width: 240px;
+    // height: 230px;
+    width: 220px;
+    height: 212px;
+    margin-left: 486px;
+  }
+  @media (max-width: 728px) {
+    padding-top: 0;
+    // top: 94px;
+    top: 70px;
+    height: auto;
+    margin-left: 0;
+  }
+  background-color: white;
+  // left: 28%;
+  margin-left: 674px;
+  padding-top: 25px;
+  position: absolute;
+  width: 284px;
+  height: 242px;
+  box-shadow: 0px 0px 4px;
+  border-radius: 12px;
+  text-align: center;
+  top: 240px;
+  display: block;
+  cursor: pointer;
+}
+
+
+.loginInput_do_asr {
+  @media (max-width: 974px) {
+    // width: 240px;
+    // height: 230px;
+    width: 220px;
+    height: 212px;
+    margin-left: 310px;
+  }
+  @media (max-width: 728px) {
+    padding-top: 0;
+    // top: 94px;
+    top: 150px;
+    height: auto;
+    margin-left: 0;
+  }
+  background-color: white;
+  // left: 28%;
+  margin-left: 600px;
+  padding-top: 25px;
+  position: absolute;
+  width: 450px;
+  height: 242px;
+  box-shadow: 0px 0px 4px;
+  border-radius: 12px;
+  text-align: center;
+  top: 240px;
+  display: block;
+  cursor: pointer;
+}
+
+.loginInput_asr_report {
+  @media (max-width: 974px) {
+    // width: 240px;
+    // height: 230px;
+    width: 220px;
+    height: 212px;
+    margin-right: 275px;
+  }
+  @media (max-width: 728px) {
+    padding-top: 0;
+    margin-right: 0;
+    height: auto;
+    // top: 508px;
+    top: 350px;
+  }
+  background-color: white;
+  // right: 28%;
+  position: absolute;
+  width: 450px;
+  height: 242px;
+  box-shadow: 0px 0px 4px;
+  border-radius: 12px;
+  text-align: center;
+  top: 240px;
+  display: block;
+  cursor: pointer;
+  margin-right: 450px;
+  padding-top: 25px;
+}
+
+
+
+.abcl_colleauges_list {
+  @media (max-width: 974px) {
+    // width: 240px;
+    // height: 230px;
+    width: 220px;
+    height: 212px;
+    margin-left: 5rem;
+  }
+  @media (max-width: 728px) {
+    padding-top: 0;
+    margin-left: 20rem;
+    height: auto;
+    // top: 300px;
+    top: 27rem;
+  }
+  background-color: white;
+  // left: 28%;
+  padding-top: 25px;
+  margin-right: 20rem;
+
+  position: absolute;
+  width: 284px;
+  height: 242px;
+  box-shadow: 0px 0px 4px;
+  border-radius: 12px;
+  text-align: center;
+  top: 25rem;
+  display: block;
+  cursor: pointer;
+}
+.abcl_result {
+  @media (max-width: 974px) {
+    // width: 240px;
+    // height: 230px;
+    width: 220px;
+    height: 212px;
+    margin-right: 15rem;
+  }
+  @media (max-width: 728px) {
+    padding-top: 0;
+    margin-right: 0;
+    height: auto;
+    // top: 508px;
+    top: 475px;
+  }
+  background-color: white;
+  // right: 28%;
+  position: absolute;
+  width: 284px;
+  height: 242px;
+  box-shadow: 0px 0px 4px;
+  border-radius: 12px;
+  text-align: center;
+  top: 240px;
+  display: block;
+  cursor: pointer;
+  margin-right: 20rem;
+  padding-top: 25px;
+}
+.abcl_spouse {
+  @media (max-width: 974px) {
+    // width: 240px;
+    // height: 230px;
+    width: 220px;
+    height: 212px;
+    margin-left: 20rem;
+  }
+  @media (max-width: 728px) {
+    padding-top: 0;
+    margin-left: 0;
+    height: auto;
+    top: 12rem;
+  }
+  background-color: white;
+  padding-top: 25px;
+  margin-left: 20rem;
+
+  position: absolute;
+  width: 284px;
+  height: 242px;
+  box-shadow: 0px 0px 4px;
+  border-radius: 12px;
+  text-align: center;
+  top: 25rem;
+  display: block;
+  cursor: pointer;
+}
+.do_abcl_test {
+  @media (max-width: 974px) {
+    // width: 240px;
+    // height: 230px;
+    width: 220px;
+    height: 212px;
+    margin-left: 20rem;
+  }
+  @media (max-width: 728px) {
+    padding-top: 0;
+    // top: 94px;
+    top: 70px;
+    height: auto;
+    margin-left: 0;
+  }
+  background-color: white;
+  // left: 28%;
+  margin-left: 20rem;
+  padding-top: 25px;
+  position: absolute;
+  width: 284px;
+  height: 242px;
+  box-shadow: 0px 0px 4px;
+  border-radius: 12px;
+  text-align: center;
+  top: 240px;
+  display: block;
+  cursor: pointer;
+}
+
+
+.loginInput1:hover {
+  background-color: #d95e63;
+  color: #eeeeee;
+  h3 {
+    color: #eeeeee !important;
+  }
+}
+.loginInput2:hover {
+  background-color: #d95e63;
+  color: #eeeeee;
+  h3 {
+    color: #eeeeee !important;
+  }
+}
+.loginInput3:hover {
+  background-color: #d95e63;
+  color: #eeeeee;
+  h3 {
+    color: #eeeeee !important;
+  }
+}
+.loginInput4:hover {
+  background-color: #d95e63;
+  color: #eeeeee;
+  h3 {
+    color: #eeeeee !important;
+  }
+}
+.loginInput_do_asr:hover,.abcl_result:hover,.abcl_colleauges_list:hover,
+.abcl_spouse:hover, .loginInput_asr_report:hover, 
+.loginInput5:hover, .do_abcl_test:hover {
+  background-color: #d95e63;
+  color: #eeeeee;
+  h3 {
+    color: #eeeeee !important;
+  }
+}
+
+//
+.logo {
+  @media (max-width: 830px) {
+    margin-right: 1px;
+    margin-top: 1px;
+    width: 5rem;
+  }
+  // @media (max-width: 380px) {
+  //   width: 40px;
+  // }
+  z-index: 999999999999999999999999999999999;
+  position: absolute;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  width: 10rem;
+  right: 0;
+}
+.logoText {
+  @media (max-width: 720px) {
+    margin-right: 106px;
+    margin-top: 34px;
+    margin-right: 74px;
+    margin-top: 25px;
+    font-size: 14px !important;
+  }
+  z-index: 999999999999999999999999999999999;
+  // @media (max-width: 380px) {
+  //   margin-right: 74px;
+  //   margin-top: 25px;
+  //   font-size: 14px !important;
+  // }
+  margin-right: 140px;
+  margin-top: 43px;
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  font-size: 18px !important;
+}
+.logoText2 {
+  @media (max-width: 720px) {
+    font-size: 14px !important;
+    left: 18px;
+    visibility: hidden;
+  }
+  left: 34px;
+  top: 8px;
+  position: absolute;
+  color: white;
+  font-weight: bold;
+}
+.logoText3 {
+  @media (max-width: 720px) {
+    font-size: 14px !important;
+    left: 18px;
+    visibility: hidden;
+  }
+  left: 34px;
+  top: 8px;
+  position: absolute;
+  color: white;
+  font-weight: bold;
+}
+.backButton {
+  @media (max-width: 720px) {
+    font-size: 0px !important;
+    left: 12px;
+    top: 44px;
+  }
+  // left: 28px;
+  // top: 60px;
+  left: 46px;
+  top: 70px;
+  position: absolute;
+  color: white;
+  font-weight: bold;
+}
+.helpButton {
+  @media (max-width: 720px) {
+    left: 12px !important;
+    top: 4px;
+    width: 34px;
+    height: 37px;
+    background: #27abb7;
+  }
+  left: 38px;
+  top: 26px;
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  background: none;
+  border: none;
+}
+.helpButton8 {
+  @media (max-width: 720px) {
+    left: 88px !important;
+    top: 4px;
+    width: 34px;
+    height: 37px;
+    background: #27abb7;
+  }
+  left: 38px;
+  top: 26px;
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  background: none;
+  border: none;
+}
+.helpButton9 {
+  @media (max-width: 720px) {
+    left: 50px !important;
+    top: 4px;
+    width: 34px;
+    height: 37px;
+    background: #27abb7;
+  }
+  left: 38px;
+  top: 26px;
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  background: none;
+  border: none;
+}
+.helpButton10 {
+  @media (max-width: 720px) {
+    left: 126px !important;
+    background: #27abb7;
+    top: 4px;
+    width: 34px;
+    height: 37px;
+  }
+  left: 38px;
+  top: 26px;
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  background: none;
+  border: none;
+}
+.helpButton2 {
+  @media (max-width: 720px) {
+    background: #27abb7;
+    margin-left: -126px;
+    width: 34px;
+    height: 37px;
+  }
+
+  left: 137px;
+  top: 12px;
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  background: none;
+  border: none;
+}
+.loginInput12 {
+  @media (max-width: 960px) {
+    // right: 6%;
+    top: 94px;
+    width: 90%;
+  }
+  @media (max-width: 720px) {
+    top: 110 !important;
+ 
+    // right: unset !important;
+  }
+  background-color: white;
+  // right: 20%;
+  position: absolute;
+  width: 64%;
+  // height: 868px;
+  height: auto;
+  box-shadow: 0px 0px 4px;
+  border-radius: 12px;
+  text-align: center;
+  top: 210px;
+  display: block;
+  // overflow: auto;
+}
+.example-radio-button {
+  margin: 8px;
+  padding: 8px;
+}
+.form__input {
+  width: 100%;
+  border: 0px solid transparent;
+  border-radius: 0;
+  border-bottom: 1px solid #aaa;
+  padding: 1em 0.5em 0.5em;
+  padding-left: 2em;
+  outline: none;
+  margin: 1.5em auto;
+  transition: all 0.5s ease;
+}
+.form__input:focus {
+  border-bottom-color: #066baf;
+  border-top-color: #066baf;
+  box-shadow: 0 0 5px rgba(0, 80, 80, 0.4);
+  border-radius: 4px;
+}
+
+.btn-colleague:hover{
+  background-color: darken( red, 25%) !important;
+}
+a.colleague-do-test:hover{
+  background-color: #1c7982 !important;
+}
+
+.userReportsRows{
+  display: flex;
+  flex-direction: row;
+  width: 500px;
+  align-items: baseline;
+  border-bottom: dotted 2px #bdbdbd;
+  justify-content: space-between;
+  @media screen and (max-width:750px) {
+    width: 320px;
+  }
+}
+.userReportLink{
+  background-color: #fa9000;
+  color: white;
+  border-radius: 5px;
+  padding: 8px;
+}
+.userReportLink:hover{
+  background-color: #ea3b3b;
+  color: white;
+}
+.userReportBackBtn{
+  min-width: 8rem;
+  background-color: #ea3b3b  !important;
+}
+.userReportBackBtn:hover{
+  background-color: darken(#ea3b3b, 10)  !important;
+}
